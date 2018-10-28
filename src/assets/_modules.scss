@@ -1,0 +1,48 @@
+//form
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+//add button icon
+.add-page {
+  width: 50px;
+  height: 50px;
+  border-radius: 100%;
+  line-height: 54px;
+  text-align: center;
+  vertical-align: middle;
+  display: inline-block;
+
+  i {
+    font-size: 20px;
+  }
+
+  &:hover {
+    background-color: $icon-hover-background-color;
+    color: $icon-hover-color;
+    transition: 0.5s;
+    cursor: pointer;
+  }
+}
+
+//button
+.btn{
+    background-color: #e52b50;
+    color: #fff;
+    padding: 12px 0px;
+    min-width: 80px;
+    border: none;
+    cursor: pointer;
+}
+
+.responsive-page-manage-page {
+  background-color: $manage-page-background-color;
+  color: $manage-page-color;
+  padding: 12px 0;
+  text-align: center;
+
+  > a {
+    padding: 0 20px;
+  }
+}

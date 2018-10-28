@@ -1,0 +1,9 @@
+.header{
+    width:100%;
+    background-color: $header-backgroud-color;
+    color: $header-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80px;
+}

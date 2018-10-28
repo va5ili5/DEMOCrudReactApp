@@ -1,0 +1,103 @@
+main {
+  max-width: $main-width;
+  margin: 0 auto;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 5px 20px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0px 5px 0px;
+}
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.responsive-page-container {
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  margin: 20px 0;
+  border-radius: 2px;
+  box-shadow: 0px 0px 5px 2px $box-shadow-color;
+  min-height: 100px;
+}
+
+.resposive-page-item {
+  display: flex;
+
+  label {
+    width: $label-width;
+  }
+
+  label,
+  p {
+    padding: 5px 10px 5px 0px;
+  }
+}
+
+.responsive-page-details {
+  border-bottom: 1px solid $border-bottom-color;
+  padding: 5px 0 15px 0;
+}
+
+.responsive-page-controls {
+  display: flex;
+  align-items: center;
+  padding: 20px 0 5px 0;
+  justify-content: center;
+}
+
+.add-page-top {
+  display: flex;
+  justify-content: center;
+  padding: 15px 0px 5px 0px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+
+  .input-control {
+    padding: 12px;
+    border: 1px solid $border-bottom-color;
+    margin-bottom: 25px;
+    font-family: $base-font-family;
+    font-size: $input-control-font-size;
+    border-radius: 2px;
+  }
+
+  textarea.input-control{
+      min-height: 120px;
+  }
+
+}
+
+
+.form-controls{
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid $border-bottom-color;
+    padding:10px 10px 30px 10px;
+}
+
+.input-control-activate{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.responsive-page-save{
+    display: flex;
+    justify-content: center;
+    padding: 20px 0 5px 0;
+}
