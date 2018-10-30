@@ -1,54 +1,41 @@
-import React, { Component } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
-class ResponsivePage extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      responsivePage: props.responsivePage,
-      type: ["Menu", "Events", "Content"]
-    };
-  }
+const ResponsivePage = props => {
+  let type = ["Menu", "Events", "Content"];
 
-  getType = () => {
-    return this.state.type[this.state.responsivePage.type];
+  const getType = () => {
+    return type[props.responsivePage.type];
   };
 
-  render() {
-    return (
-      <div className="responsive-page-container">
-        <div className = "responsive-page-details">
-          <div className="resposive-page-item">
-            <label>Title:</label>
-            <p>{this.state.responsivePage.title}</p>
-          </div>
-          <div className="resposive-page-item">
-            <label>Description:</label>
-            <p>{this.state.responsivePage.description}</p>
-          </div>
-          <div className="resposive-page-item">
-            <label>Published On:</label>
-            <p>
-              {new Date(
-                this.state.responsivePage.publishedOn
-              ).toLocaleDateString("en-GB")}
-            </p>
-          </div>
-          <div className="resposive-page-item">
-            <label>Type:</label>
-            <p>{this.getType()}</p>
-          </div>
+  return (
+    <div className="list-item-container">
+      <div className="list-item-details">
+        <div className="list-item-details-row">
+          <label>Title:</label>
+          <p>{props.responsivePage.title}</p>
         </div>
-        <div className = "responsive-page-controls">
-        <div className="responsive-page-manage-page">
-        <Link to={`/ResponsivePages/edit/${this.state.responsivePage.id}`}>
-            Manage Page
-          </Link>
+        <div className="list-item-details-row">
+          <label>Description:</label>
+          <p>{props.responsivePage.description}</p>
         </div>
+        <div className="list-item-details-row">
+          <label>Published On:</label>
+          <p>
+            {new Date(props.responsivePage.publishedOn).toLocaleDateString("en-GB")}
+          </p>
+        </div>
+        <div className="list-item-details-row">
+          <label>Type:</label>
+          <p>{getType()}</p>
         </div>
       </div>
-    );
-  }
-}
+      <div className="list-item-controls">
+        <Link to={`/ResponsivePages/edit/${props.responsivePage.id}`} className="list-item-control-link">Manage Page</Link>
+        <button className="list-item-control-btn" onClick={()=>props.deleteResponsivePage(props.responsivePage.id)}>Delete</button>
+        </div>
+    </div>
+  );
+};
 
 export default ResponsivePage;

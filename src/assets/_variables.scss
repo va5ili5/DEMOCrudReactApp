@@ -1,14 +1,16 @@
 // variables
 
 // <-----  colors  ----->
-$base-backgroud-color: #fff;
-$base-color: #555;
 
-$header-backgroud-color: #e52b50;
-$header-color: #fff;
+$lighter-gray:#f5f5f5; //body
+$light-gray:#c5c5c5;//box-shadow
+$gray: #a5a5a5; //cancel btn
+$dark-gray: #333; //maincolor
+$green-oil: #8dc63f;
+$white: #fff;
+$red:#e52b50;
 
-$box-shadow-color: #c5c5c5;
-$border-bottom-color: #c6c6c6;
+
 // <-----  typography  ----->
 $base-font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
 $base-font-size: 16px;
@@ -22,20 +24,54 @@ $h2-font-weight: 500;
 
 $h3-font-size:1.25em;
 
+$btn-font-size: 0.875em;
+$controls-font-size:0.875em;
+
+
+// <-----  common  ----->
+//shadow
+$box-shadow-color: $light-gray;
+
+//border
+$border-bottom-color: $light-gray;
+
+//links-buttons
+$button-primary-background-color: $green-oil;
+$button-primary-color: $white;
+
+$button-delete-background-color: $red;
+$button-cancel-background-color: $gray;
+
 
 // <-----  components  ----->
 //main
+$base-background-color: $lighter-gray;
+$base-color: $dark-gray;
 $main-width:61.25em;
 
+//header
+$header-backgroud-color: $green-oil;
+$header-color: $white;
+$header-height: 5em;
+
+//list-item
+$list-item-container-height: 6.25em;
+$label-width: 6.875em;
+$list-item-background-color:$white;
+$list-item-manage-background-color: $green-oil;
+$list-item-control-color: $white;
+
+//list-item-controls
+$list-item-control-height: 45px;
+$list-item-control-line-height: 45px;
+$list-item-control-width: 110px;
+
+
 //form
-//$input-control-border-color:#c6c6c6;
+$form-background-color: $white;
+$list-item-manage-background-color: $green-oil;
 $input-control-font-size: 1em;
 
-//item
-$label-width: 110px;
-$manage-page-background-color: #e52b50; 
-$manage-page-color: #fff;
-
 //add-page-icon
-$icon-hover-background-color: #e52b50;
-$icon-hover-color: #fff;
+$icon-hover-background-color: $green-oil;
+$icon-hover-color: $white;

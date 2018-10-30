@@ -1,7 +1,15 @@
+html {
+  box-sizing: border-box;
+}
+
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 html,
 body {
   width: 100%;
-  height: 100vh;
 }
 
 body {
@@ -9,7 +17,7 @@ body {
   font-size: $base-font-size;
   line-height: 1.5;
   font-weight: $base-font-weight;
-  background-color: $base-backgroud-color;
+  background-color: $base-background-color;
   color: $base-color;
   -webkit-font-smoothing: antialiased;
 }
@@ -40,6 +48,13 @@ h3 {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+button{
+  font-family: $base-font-family;
+  font-size: $btn-font-size;
+  border:none;
+  cursor: pointer;
 }
 
 input,

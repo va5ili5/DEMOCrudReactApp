@@ -26,6 +26,17 @@ class ResponsivePages extends Component {
       .catch(error => console.log(error));
   };
 
+  //delete responsive page
+  deleteResponsivePage = (id) =>{
+    fetch("http://pagesmanagement.azurewebsites.net/api/ResponsivePages/"+ id, {
+      method: "DELETE",
+    })
+
+    this.setState({ 
+      responsivePages:this.state.responsivePages.filter(r => r.id !== id )
+    })
+  }
+  
   render() {
     const activeResponsivePages = this.state.responsivePages
       .filter(function(responsivePage) {
@@ -36,6 +47,7 @@ class ResponsivePages extends Component {
           <ResponsivePage
             key={responsivePage.id}
             responsivePage={responsivePage}
+            deleteResponsivePage = {this.deleteResponsivePage}
           />
         );
       });
