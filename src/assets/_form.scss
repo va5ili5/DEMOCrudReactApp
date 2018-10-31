@@ -48,6 +48,12 @@
 .form-input-field-container-datepicker {
   @extend .form-input-field-container;
   align-self: flex-end;
+  @media screen and (max-width: 735px) {
+    width: 100%;
+    .react-datepicker-wrapper{
+      width: 100%;
+    }
+  }
 }
 
 .form-controls {
