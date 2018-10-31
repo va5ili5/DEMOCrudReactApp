@@ -8,7 +8,8 @@ class ResponsivePages extends Component {
   constructor() {
     super();
     this.state = {
-      responsivePages: []
+      responsivePages: [],
+      loading: false
     };
   }
 
@@ -21,7 +22,7 @@ class ResponsivePages extends Component {
     axios
       .get("http://pagesmanagement.azurewebsites.net/api/ResponsivePages")
       .then(response => {
-        this.setState({ responsivePages: response.data });
+        this.setState({ responsivePages: response.data, loading:true });
       })
       .catch(error => console.log(error));
   };
@@ -38,6 +39,7 @@ class ResponsivePages extends Component {
   }
   
   render() {
+    if(this.state.loading){
     const activeResponsivePages = this.state.responsivePages
       .filter(function(responsivePage) {
         return responsivePage.isActive === true;
@@ -61,9 +63,13 @@ class ResponsivePages extends Component {
             </Link>
           </div>
         </div>
-        <div className="list-container">{activeResponsivePages}</div>
+          <div className="list-container">{activeResponsivePages}</div>
       </div>
     );
+    }
+    else{
+      return(<div className="loader"></div>);
+    }
   }
 }
 

@@ -1,27 +1,82 @@
 main {
   max-width: $main-width;
   margin: 0 auto;
+  padding-bottom: 50px;
+  display: block;
+}
+
+#root {
+  @include flexbox($flex-direction: column);
+  min-height: 100%;
+  position: relative;
 }
 
 .container {
-  display: flex;
-  flex-direction: column;
   padding: 5px 20px;
+  min-height: 100%;
+  position: relative;
+}
+
+.header {
+  @include flexbox($justify-content: center, $align-items: center);
+  width: 100%;
+  background-color: $header-backgroud-color;
+  color: $header-color;
+  min-height: 80px;
+}
+
+.header-title {
+  padding: 18px 20px;
+}
+
+.footer {
+  @include flexbox($justify-content: center, $align-items: center);
+  min-height: 50px;
+  background-color: $footer-background-color;
+  color: $footer-color;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-content {
+  padding: 15px 20px;
 }
 
 .top {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  @include flexbox($justify-content: space-between, $align-items: center);
   padding: 15px 0px 5px 0px;
 }
 
-.add-page-top {
-  display: flex;
-  justify-content: center;
-  padding: 15px 0px 5px 0px;
+.loader {
+  position:fixed;
+  width:100%;
+  left:0;right:0;top:0;bottom:0;
+  z-index: 1040;
+    background-color: #000;
+    opacity: .5;
 }
 
+@-webkit-keyframes spin {
+from {-webkit-transform:rotate(0deg);}
+to {-webkit-transform:rotate(360deg);}
+}
 
+@keyframes spin {
+from {transform:rotate(0deg);}
+to {transform:rotate(360deg);}
+}
 
-
+.loader::after {
+  content:'';
+  display:block;
+  position:absolute;
+  left:48%;top:40%;
+  width:40px;height:40px;
+  border-style:solid;
+  border-color:$green;
+  border-top-color:transparent;
+  border-radius:50%;
+  -webkit-animation: spin .8s linear infinite;
+  animation: spin .8s linear infinite;
+}

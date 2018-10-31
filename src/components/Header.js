@@ -2,9 +2,11 @@ import React from "react";
 
 const Header = (props) => {
   return (
-    <div className="header">
+    <header className="header">
+    <div className="header-title">
         <h1>Responsive Pages Manager</h1>
-      </div>
+        </div>
+      </header>
   );
 };
 

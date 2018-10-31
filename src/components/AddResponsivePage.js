@@ -76,7 +76,11 @@ class AddResponsivePage extends Component {
 
   render() {
     return (
-      <form className="form-container" onSubmit={this.handleSubmit}>
+      <div className="form-container">
+        <div className="top-title">
+            <h2>Add Responsive Page</h2>
+          </div>
+        <form className="form" onSubmit={this.handleSubmit}>
         <div className="form-input-fields">
           <div className="form-input-field-container">
             <input
@@ -123,6 +127,7 @@ class AddResponsivePage extends Component {
             <button className="form-control-button" type="submit">Save</button>
         </div>
       </form>
+      </div>
     );
   }
 }

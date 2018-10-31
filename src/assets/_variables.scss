@@ -4,12 +4,11 @@
 
 $lighter-gray:#f5f5f5; //body
 $light-gray:#c5c5c5;//box-shadow
-$gray: #a5a5a5; //cancel btn
+$gray: #a0b3b0; //cancel btn
 $dark-gray: #333; //maincolor
-$green-oil: #8dc63f;
+$green: #1ab188;
 $white: #fff;
 $red:#e52b50;
-
 
 // <-----  typography  ----->
 $base-font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -19,59 +18,58 @@ $base-font-weight: 400;
 $h1-font-size:1.825em;
 $h1-font-weight: 700;
 
-$h2-font-size:1.7375em;
+$h2-font-size:1.5375em;
 $h2-font-weight: 500;
 
 $h3-font-size:1.25em;
 
 $btn-font-size: 0.875em;
-$controls-font-size:0.875em;
+$control-element-font-size:0.875em;
 
+$validation-error-font-size:0.75em;
 
 // <-----  common  ----->
-//shadow
-$box-shadow-color: $light-gray;
-
 //border
 $border-bottom-color: $light-gray;
 
+//border radius
+$border-radius:2px;
+
 //links-buttons
-$button-primary-background-color: $green-oil;
+$button-primary-background-color: $green;
 $button-primary-color: $white;
 
 $button-delete-background-color: $red;
 $button-cancel-background-color: $gray;
+
+//container
+$generic-container-background-color: $white;
+$control-element-color: $white;
+$control-element-background-color: $green;
 
 
 // <-----  components  ----->
 //main
 $base-background-color: $lighter-gray;
 $base-color: $dark-gray;
-$main-width:61.25em;
+$main-width:736px;
 
 //header
-$header-backgroud-color: $green-oil;
+$header-backgroud-color: $green;
 $header-color: $white;
-$header-height: 5em;
-
-//list-item
-$list-item-container-height: 6.25em;
-$label-width: 6.875em;
-$list-item-background-color:$white;
-$list-item-manage-background-color: $green-oil;
-$list-item-control-color: $white;
-
-//list-item-controls
-$list-item-control-height: 45px;
-$list-item-control-line-height: 45px;
-$list-item-control-width: 110px;
-
 
 //form
-$form-background-color: $white;
-$list-item-manage-background-color: $green-oil;
+$form-title-background-color: $green;
+$form-title-color: $white;
 $input-control-font-size: 1em;
 
 //add-page-icon
-$icon-hover-background-color: $green-oil;
+$icon-hover-background-color: $green;
 $icon-hover-color: $white;
+
+//footer
+$footer-background-color:$dark-gray;
+$footer-color: $white;
+
+//validation error
+$validation-error-color: $red;

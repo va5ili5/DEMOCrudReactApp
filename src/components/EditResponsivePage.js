@@ -121,11 +121,11 @@ class EditResponsivePage extends Component {
 
   render() {
     return (
-      <div>
-        <div className="add-page-top">
+      <div className="form-container">
+        <div className="top-title">
           <h2>Edit Responsive Page</h2>
         </div>
-        <form className="form-container" onSubmit={this.handleSubmit}>
+        <form className="form" onSubmit={this.handleSubmit}>
           <div className="form-input-fields">
           <div className="form-input-field-container">
             <input type="text" id="title" name="title" className="form-input-field" placeholder="title" value={this.state.title} onChange={this.handleChange} />

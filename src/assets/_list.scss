@@ -1,60 +1,42 @@
 .list-container {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
+  @include flexbox($flex-direction: column, $flex-grow: 1, $flex-wrap: wrap, $justify-content: space-between);
+}
+
+.list-item-container {
+  @extend .generic-container;
+  padding: 20px;
+  border:none;
+}
+
+.list-item-details {
+  @include flexbox($flex-direction: column);
+  border-bottom: 1px solid $border-bottom-color;
+  padding: 5px 0 15px 0;
+}
+
+.list-item-details-row {
+  @include flexbox();
+
+  label {
+    width: 110px;
   }
 
-  .list-item-container{
-    padding: 15px;
-    margin: 20px 0;
-    border-radius: 2px;
-    box-shadow: 0px 0px 5px 2px $box-shadow-color;
-    min-height: $list-item-container-height;
-    background-color: $list-item-background-color;
+  label,
+  p {
+    padding: 5px 10px 5px 0px;
   }
+}
 
-  .list-item-details{
-    border-bottom: 1px solid $border-bottom-color;
-    padding: 5px 0 15px 0;
-    display: flex;
-    flex-direction: column;
-  }
+.list-item-controls {
+  @include flexbox($align-items: center, $justify-content: space-between);
+  padding: 15px 0 0 0;
+}
 
-  .list-item-details-row{
-    display: flex;
+.list-item-control-link {
+  @extend .control-element;
+}
 
-    label {
-        width: $label-width;
-    }
-
-    label,
-    p {
-        padding: 5px 10px 5px 0px;
-    }
-  }
-
-  .list-item-controls{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 15px 0 0 0;
-  }
-
-  .list-item-control{
-    height: $list-item-control-height;
-    line-height: $list-item-control-line-height;
-    width: $list-item-control-width;
-    text-align: center;
-    background-color:$list-item-manage-background-color;
-    color: $list-item-control-color;
-    font-size: $controls-font-size;
-  }
-
-  .list-item-control-link{
-    @extend .list-item-control;
-  }
-
-  .list-item-control-btn{
-    @extend .list-item-control;
-    background-color: $button-delete-background-color;
-  }
+.list-item-control-btn {
+  @extend .control-element;
+  background-color: $button-delete-background-color;
+}
