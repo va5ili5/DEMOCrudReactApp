@@ -30,7 +30,7 @@ $validation-error-font-size:0.75em;
 
 // <-----  common  ----->
 //border
-$border-bottom-color: $light-gray;
+$border-color: $light-gray;
 
 //border radius
 $border-radius:2px;
@@ -44,6 +44,8 @@ $button-cancel-background-color: $gray;
 
 //container
 $generic-container-background-color: $white;
+$generic-container-height:225px;
+$generic-container-shadow: 0 5px 11px 0 rgba(0,0,0,.18),0 4px 15px 0 rgba(0,0,0,.15);
 $control-element-color: $white;
 $control-element-background-color: $green;
 
