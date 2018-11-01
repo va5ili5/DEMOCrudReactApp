@@ -26,6 +26,7 @@ main {
 }
 
 .header-title {
+  @include flexbox();
   padding: 18px 20px;
 }
 
